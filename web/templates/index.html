@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SpineGuard – AI Vertebral Disorder Classifier</title>
+  
+  <link rel="stylesheet" href="../static/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>SpineGuard</h1>
+      <p>AI-powered detection of spinal disorders</p>
+    </header>
+
+    <main>
+      <section class="input-section">
+        <h2>Enter biomechanical measurements</h2>
+        
+        <form id="prediction-form">
+          <div class="grid-2">
+            <label>Pelvic Incidence <span>(°)</span>
+              <input type="number" step="0.1" id="pelvic_incidence" required>
+            </label>
+            <label>Pelvic Tilt <span>(°)</span>
+              <input type="number" step="0.1" id="pelvic_tilt" required>
+            </label>
+            <label>Lumbar Lordosis Angle <span>(°)</span>
+              <input type="number" step="0.1" id="lumbar_lordosis_angle" required>
+            </label>
+            <label>Sacral Slope <span>(°)</span>
+              <input type="number" step="0.1" id="sacral_slope" required>
+            </label>
+            <label>Pelvic Radius <span>(mm)</span>
+              <input type="number" step="0.1" id="pelvic_radius" required>
+            </label>
+            <label>Degree Spondylolisthesis <span>(mm)</span>
+              <input type="number" step="0.1" id="degree_spondylolisthesis" required>
+            </label>
+          </div>
+
+          <button type="submit" id="predict-btn">
+            <span class="btn-text">Predict Disorder</span>
+            <span class="loading hidden">Analyzing...</span>
+          </button>
+        </form>
+      </section>
+
+      <section class="result-section hidden" id="result-section">
+        <h2>Diagnosis</h2>
+        <div class="result-card" id="result-card">
+          <div class="result-class" id="result-class">—</div>
+          <div class="confidence-bar">
+            <div class="bar" id="confidence-bar"></div>
+          </div>
+          <div class="confidence-value" id="confidence-value">—</div>
+        </div>
+
+        <div class="probabilities">
+          <h3>Probabilities</h3>
+          <div class="prob-bar">
+            <span>Normal</span>
+            <div class="bar-container"><div class="prob-fill" id="prob-normal"></div></div>
+            <span id="prob-normal-val">—</span>
+          </div>
+          <div class="prob-bar">
+            <span>Hernia</span>
+            <div class="bar-container"><div class="prob-fill" id="prob-hernia"></div></div>
+            <span id="prob-hernia-val">—</span>
+          </div>
+          <div class="prob-bar">
+            <span>Spondylolisthesis</span>
+            <div class="bar-container"><div class="prob-fill" id="prob-spondy"></div></div>
+            <span id="prob-spondy-val">—</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Powered by PyTorch & FastAPI • Chiheb Rezgui © 2025</p>
+    </footer>
+  </div>
+
+  <script src="../static/app.js"></script>
+</body>
+</html>

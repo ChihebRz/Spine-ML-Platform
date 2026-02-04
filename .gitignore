@@ -1,0 +1,42 @@
+# Python / virtual env
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+*.env
+
+# ML artifacts (large files, don't commit trained models)
+ml/artifacts/
+*.pth
+*.pkl
+*.joblib
+*.h5
+
+# Logs & temp files
+logs/
+*.log
+*.tmp
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Editor / OS files
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Build / dist
+dist/
+build/
+*.egg-info/
+
+# Docker
+Dockerfile.*  # if you have backups
