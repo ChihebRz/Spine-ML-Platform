@@ -25,10 +25,10 @@ Perfect showcase for **machine learning engineering**, **model serving**, and **
 
 ## 📸 Screenshots
 
-<!-- You can add real screenshots later -->
-<!-- ![Interface](screenshots/web-interface.png) -->
-<!-- ![Prediction](screenshots/result-example.png) -->
-<!-- ![Swagger](screenshots/swagger-docs.png) -->
+<img width="1907" height="901" alt="image" src="https://github.com/user-attachments/assets/2411703d-4687-4bf1-b7ea-417b1e12243d" />
+<img width="1917" height="893" alt="image" src="https://github.com/user-attachments/assets/a4fcace3-fd89-436f-a85a-ac9202ff3975" />
+
+
 
 ## 📂 Project Structure
 
